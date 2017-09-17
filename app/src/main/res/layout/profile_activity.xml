@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivPicture"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivPicture"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="Title" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_toRightOf="@id/ivPicture"
+        android:text="5.0"
+        android:layout_alignBottom="@id/ivStar"
+        />
+
+    <ImageView
+        android:id="@+id/ivStar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/tvTitle"
+        android:layout_toRightOf="@id/tvRating"
+        app:srcCompat="@android:drawable/star_off" />
+
+    <TextView
+        android:id="@+id/tvTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRating"
+        android:layout_alignLeft="@id/tvRating"
+        android:text="#tag"
+        />
+
+    <TextView
+        android:id="@+id/tvDescLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/ivPicture"
+        android:textSize="20sp"
+        android:text="Description"/>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescLabel"
+        android:layout_marginLeft="15dp"
+        />
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        android:layout_below="@id/tvDesc"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tvReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/vDivider"
+        android:textSize="20sp"
+        android:text="Reviews:"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvReviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvReviews"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
